@@ -1,4 +1,5 @@
 import 'package:chuck_norris_app/provider/chuck_norris_provider.dart';
+import 'package:chuck_norris_app/widgets/app_drawer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -33,6 +34,7 @@ class _ChuckFactsMainScreenState extends State<ChuckFactsMainScreen> {
               ),
         ],
       ),
+      drawer: AppDrawer(),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () => chuckData.getChuckFact(),

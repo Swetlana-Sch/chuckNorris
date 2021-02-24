@@ -1,5 +1,7 @@
 import 'package:chuck_norris_app/models/chuck_facts.dart';
 import 'package:chuck_norris_app/provider/chuck_norris_provider.dart';
+import 'package:chuck_norris_app/screens/categories_screen.dart';
+import 'package:chuck_norris_app/screens/category_details.dart';
 import 'package:chuck_norris_app/screens/chuck_facts_main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -24,6 +26,10 @@ class MyApp extends StatelessWidget {
           accentColor: Colors.yellow,
         ),
         home: ChuckFactsMainScreen(),
+        routes: {
+          CategoriesScreen.routeName: (ctx) => CategoriesScreen(),
+          CategoryDetailScreen.routeName: (ctx) => CategoryDetailScreen(),
+        },
       ),
     );
   }
